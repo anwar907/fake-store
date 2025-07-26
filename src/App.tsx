@@ -40,7 +40,7 @@ function Section({ children, title }: SectionProps): React.JSX.Element {
         style={[
           styles.sectionDescription,
           {
-            color: isDarkMode ? 'light' : 'dark',
+            color: isDarkMode ? '#f0f0f0' : '#333333',
           },
         ]}>
         {children}
@@ -53,7 +53,7 @@ function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? 'dark' : 'light',
+    backgroundColor: isDarkMode ? '#333333' : '#f0f0f0',
   };
 
   /*
@@ -76,7 +76,7 @@ function App(): React.JSX.Element {
       <ScrollView
         style={backgroundStyle}>
         <SafeArea />
-        <CustomAppBar title='Judul' children='SubJudul' />
+        <CustomAppBar title='Judul'>SubJudul</CustomAppBar>
         {/* <View style={{ paddingRight: safePadding }}>
 
         </View>
